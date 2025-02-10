@@ -1,13 +1,7 @@
 # 🏦 Sistema de Simulación Bancaria Concurrente
 
 <p align="center">
-  <img src="https://your-logo-url.com/logo.png" width="120" alt="Bank Simulation Logo" />
-</p>
-
-<p align="center">
-  <a href="https://github.com/KiritoKazut0/bank-simulation" target="_blank"><img src="https://img.shields.io/github/stars/KiritoKazut0/bank-simulation?style=social" alt="GitHub Stars" /></a>
-  <a href="https://github.com/KiritoKazut0/bank-simulation/issues" target="_blank"><img src="https://img.shields.io/github/issues/KiritoKazut0/bank-simulation" alt="Issues" /></a>
-  <a href="https://github.com/KiritoKazut0/bank-simulation/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/KiritoKazut0/bank-simulation" alt="License" /></a>
+  <img src="https://raw.githubusercontent.com/KiritoKazut0/bank-simulation/main/assets/logo.png" width="120" alt="Bank Simulation Logo" />
 </p>
 
 ## 📝 Descripción
@@ -33,6 +27,11 @@ Sistema que simula las operaciones de un banco con tres ventanillas, implementan
 
 ## 🏗️ Arquitectura del Sistema
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/KiritoKazut0/bank-simulation/main/assets/arquitectura.png" width="120" alt="Bank Simulation Logo" />
+</p>
+
+
 ### 🧩 Componentes Principales
 
 #### 🧵 Hilos (Threads)
@@ -45,16 +44,19 @@ Sistema que simula las operaciones de un banco con tres ventanillas, implementan
 #### 🔐 Primitivas de Sincronización
 
 1. **Lock**
+
    - Protege el acceso al saldo bancario
    - Previene condiciones de carrera
    - Asegura la integridad de las transacciones
 
 2. **Semaphore(3)**
+
    - Controla el acceso a ventanillas
    - Limita a 3 clientes simultáneos
    - Gestiona la disponibilidad de servicio
 
 3. **Event**
+
    - Señaliza ventanillas disponibles
    - Optimiza la cola de espera
    - Mejora la eficiencia del sistema
@@ -107,10 +109,6 @@ python main.py
 - ✅ Sistema de logging completo
 
 ## ✍️ Autor
-
-<p align="center">
-  <a href="https://github.com/KiritoKazut0" target="_blank"><img src="https://img.shields.io/badge/GitHub-KiritoKazut0-blue?style=flat&logo=github" alt="GitHub Profile" /></a>
-</p>
 
 [Norberto Lopez](https://github.com/KiritoKazut0)
 
