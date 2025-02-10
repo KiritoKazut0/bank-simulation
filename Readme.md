@@ -1,7 +1,7 @@
 # 🏦 Sistema de Simulación Bancaria Concurrente
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KiritoKazut0/bank-simulation/main/assets/logo.png" width="150" alt="Bank Simulation Logo" />
+  <img src="https://raw.githubusercontent.com/KiritoKazut0/bank-simulation/main/assets/logo.png" width="100%" alt="Bank Simulation Logo" />
 </p>
 
 ---
@@ -35,7 +35,7 @@ Sistema que simula las operaciones de un banco con tres ventanillas, implementan
 ## 🏛️ Arquitectura del Sistema
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KiritoKazut0/bank-simulation/main/assets/arquitectura.png" width="300" alt="Arquitectura del Sistema" />
+  <img src="https://raw.githubusercontent.com/KiritoKazut0/bank-simulation/main/assets/arquitectura.png" width="80%" alt="Arquitectura del Sistema" />
 </p>
 
 ### 🧬 Componentes Principales
