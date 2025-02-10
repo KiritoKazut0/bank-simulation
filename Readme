@@ -28,9 +28,8 @@ Sistema que simula las operaciones de un banco con tres ventanillas, implementan
 ## 🏗️ Arquitectura del Sistema
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/KiritoKazut0/bank-simulation/main/assets/arquitectura.png" width="120" alt="Bank Simulation Logo" />
+  <img src="https://raw.githubusercontent.com/KiritoKazut0/bank-simulation/main/assets/arquitectura.png" width="120" alt="Bank Simulation Architecture" />
 </p>
-
 
 ### 🧩 Componentes Principales
 
@@ -111,4 +110,6 @@ python main.py
 ## ✍️ Autor
 
 [Norberto Lopez](https://github.com/KiritoKazut0)
+
+
 
