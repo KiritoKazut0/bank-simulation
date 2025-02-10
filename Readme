@@ -1,12 +1,18 @@
 # 🏦 Sistema de Simulación Bancaria Concurrente
 
+<p align="center">
+  <img src="https://your-logo-url.com/logo.png" width="120" alt="Bank Simulation Logo" />
+</p>
 
+<p align="center">
+  <a href="https://github.com/tu-usuario/bank-simulation" target="_blank"><img src="https://img.shields.io/github/stars/tu-usuario/bank-simulation?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/tu-usuario/bank-simulation/issues" target="_blank"><img src="https://img.shields.io/github/issues/tu-usuario/bank-simulation" alt="Issues" /></a>
+  <a href="https://github.com/tu-usuario/bank-simulation/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/github/license/tu-usuario/bank-simulation" alt="License" /></a>
+</p>
 
 ## 📝 Descripción
 
 Sistema que simula las operaciones de un banco con tres ventanillas, implementando programación concurrente en Python. Cada cliente es un hilo independiente que puede realizar depósitos o retiros, manteniendo la integridad del saldo bancario mediante mecanismos de sincronización.
-
-
 
 ## ✨ Características Principales
 
@@ -27,9 +33,7 @@ Sistema que simula las operaciones de un banco con tres ventanillas, implementan
 
 ## 🏗️ Arquitectura del Sistema
 
-
-
-### Componentes Principales
+### 🧩 Componentes Principales
 
 #### 🧵 Hilos (Threads)
 
@@ -41,26 +45,23 @@ Sistema que simula las operaciones de un banco con tres ventanillas, implementan
 #### 🔐 Primitivas de Sincronización
 
 1. **Lock**
-
    - Protege el acceso al saldo bancario
    - Previene condiciones de carrera
    - Asegura la integridad de las transacciones
 
 2. **Semaphore(3)**
-
    - Controla el acceso a ventanillas
    - Limita a 3 clientes simultáneos
    - Gestiona la disponibilidad de servicio
 
 3. **Event**
-
    - Señaliza ventanillas disponibles
    - Optimiza la cola de espera
    - Mejora la eficiencia del sistema
 
 ## 📁 Estructura del Proyecto
 
-```
+```bash
 bank_simulation/
 ├── 📄 main.py           # Punto de entrada
 ├── 📄 concurrencia.py   # Lógica de concurrencia
@@ -78,14 +79,14 @@ tkinter (incluido en Python)
 
 ## 🚀 Instalación y Ejecución
 
-1. **Clonar el repositorio**
+### 1️⃣ Clonar el repositorio
 
 ```bash
 git clone https://github.com/tu-usuario/bank-simulation.git
 cd bank-simulation
 ```
 
-2. **Ejecutar la aplicación**
+### 2️⃣ Ejecutar la aplicación
 
 ```bash
 python main.py
@@ -106,6 +107,10 @@ python main.py
 - ✅ Sistema de logging completo
 
 ## ✍️ Autor
+
+<p align="center">
+  <a href="https://github.com/KiritoKazut0" target="_blank"><img src="https://img.shields.io/badge/GitHub-KiritoKazut0-blue?style=flat&logo=github" alt="GitHub Profile" /></a>
+</p>
 
 [Norberto Lopez](https://github.com/KiritoKazut0)
 
