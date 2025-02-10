@@ -1,0 +1,157 @@
+# 🏦 Sistema de Simulación Bancaria Concurrente
+
+<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fondo -->
+    <rect width="800" height="200" fill="#1a1a1a"/>
+    
+    <text x="400" y="80" text-anchor="middle" font-size="40" fill="#fff" font-weight="bold">Sistema Bancario Concurrente</text>
+  
+
+    <circle cx="200" cy="130" r="20" fill="#4CAF50"/>
+    <circle cx="400" cy="130" r="20" fill="#2196F3"/>
+    <circle cx="600" cy="130" r="20" fill="#FF5722"/>
+    
+    <text x="200" y="140" text-anchor="middle" font-size="12" fill="#fff">Python</text>
+    <text x="400" y="140" text-anchor="middle" font-size="12" fill="#fff">Threading</text>
+    <text x="600" y="140" text-anchor="middle" font-size="12" fill="#fff">Tkinter</text>
+</svg>
+
+## 📝 Descripción
+Sistema que simula las operaciones de un banco con tres ventanillas, implementando programación concurrente en Python. Cada cliente es un hilo independiente que puede realizar depósitos o retiros, manteniendo la integridad del saldo bancario mediante mecanismos de sincronización.
+
+![Bank Simulation Demo](assets/demo.gif)
+
+## ✨ Características Principales
+- 🔄 Simulación concurrente de operaciones bancarias
+- 👥 Múltiples clientes operando simultáneamente
+- 🏧 Tres ventanillas de servicio
+- 💰 Control de saldo en tiempo real
+- 🔒 Sincronización mediante primitivas de threading
+
+## 🛠️ Tecnologías Utilizadas
+- **Python 3.x**: Lenguaje de programación principal
+- **Tkinter**: Interfaz gráfica de usuario
+- **Threading**: Módulo para programación concurrente
+  - Lock
+  - Semaphore
+  - Event
+
+## 🏗️ Arquitectura del Sistema
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+    <!-- Fondo -->
+    <rect width="800" height="400" fill="#f5f5f5"/>
+    
+    <!-- Título -->
+    <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">Arquitectura del Sistema Bancario</text>
+    
+    <!-- Cliente -->
+    <rect x="50" y="100" width="120" height="60" rx="10" fill="#4CAF50" opacity="0.8"/>
+    <text x="110" y="135" text-anchor="middle" fill="white" font-weight="bold">Cliente Thread</text>
+    
+    <!-- Ventanillas -->
+    <rect x="300" y="80" width="100" height="40" rx="5" fill="#2196F3" opacity="0.8"/>
+    <text x="350" y="105" text-anchor="middle" fill="white" font-size="14">Ventanilla 1</text>
+    
+    <rect x="300" y="140" width="100" height="40" rx="5" fill="#2196F3" opacity="0.8"/>
+    <text x="350" y="165" text-anchor="middle" fill="white" font-size="14">Ventanilla 2</text>
+    
+    <rect x="300" y="200" width="100" height="40" rx="5" fill="#2196F3" opacity="0.8"/>
+    <text x="350" y="225" text-anchor="middle" fill="white" font-size="14">Ventanilla 3</text>
+    
+    <!-- Banco -->
+    <rect x="550" y="100" width="120" height="60" rx="10" fill="#FF5722" opacity="0.8"/>
+    <text x="610" y="135" text-anchor="middle" fill="white" font-weight="bold">Banco Core</text>
+    
+    <!-- Conexiones -->
+    <line x1="170" y1="130" x2="300" y2="100" stroke="#666" stroke-width="2"/>
+    <line x1="170" y1="130" x2="300" y2="160" stroke="#666" stroke-width="2"/>
+    <line x1="170" y1="130" x2="300" y2="220" stroke="#666" stroke-width="2"/>
+    
+    <line x1="400" y1="100" x2="550" y2="130" stroke="#666" stroke-width="2"/>
+    <line x1="400" y1="160" x2="550" y2="130" stroke="#666" stroke-width="2"/>
+    <line x1="400" y1="220" x2="550" y2="130" stroke="#666" stroke-width="2"/>
+    
+    <!-- Leyenda -->
+    <rect x="50" y="300" width="20" height="20" fill="#4CAF50" opacity="0.8"/>
+    <text x="80" y="315" font-size="14">Clientes</text>
+    
+    <rect x="150" y="300" width="20" height="20" fill="#2196F3" opacity="0.8"/>
+    <text x="180" y="315" font-size="14">Ventanillas</text>
+    
+    <rect x="250" y="300" width="20" height="20" fill="#FF5722" opacity="0.8"/>
+    <text x="280" y="315" font-size="14">Sistema Central</text>
+</svg>
+
+### Componentes Principales
+
+#### 🧵 Hilos (Threads)
+- **Cliente (Thread Principal)**
+  - Representa cada cliente como un hilo independiente
+  - Gestiona operaciones de depósito y retiro
+  - Interactúa con las ventanillas disponibles
+
+#### 🔐 Primitivas de Sincronización
+
+1. **Lock**
+   - Protege el acceso al saldo bancario
+   - Previene condiciones de carrera
+   - Asegura la integridad de las transacciones
+
+2. **Semaphore(3)**
+   - Controla el acceso a ventanillas
+   - Limita a 3 clientes simultáneos
+   - Gestiona la disponibilidad de servicio
+
+3. **Event**
+   - Señaliza ventanillas disponibles
+   - Optimiza la cola de espera
+   - Mejora la eficiencia del sistema
+
+
+## 📁 Estructura del Proyecto
+```
+bank_simulation/
+├── 📄 main.py           # Punto de entrada
+├── 📄 concurrencia.py   # Lógica de concurrencia
+├── 📄 vista.py          # Interfaz gráfica
+├── 📄 Diagrama.png      # Imagen del diagrama
+└── 📄 README.md         # Documentación
+```
+
+## ⚙️ Requisitos Previos
+```txt
+Python 3.x
+tkinter (incluido en Python)
+```
+
+## 🚀 Instalación y Ejecución
+
+1. **Clonar el repositorio**
+```bash
+git clone https://github.com/tu-usuario/bank-simulation.git
+cd bank-simulation
+```
+
+2. **Ejecutar la aplicación**
+```bash
+python main.py
+```
+
+## 💻 Uso
+1. Inicia la aplicación
+2. Usa los botones para crear nuevos clientes
+3. Ingresa el monto para la transacción
+4. Observa el estado de las ventanillas y el saldo en tiempo real
+
+## 🛡️ Manejo de Excepciones
+- ✅ Validación de montos negativos
+- ✅ Control de saldo insuficiente
+- ✅ Gestión de errores en hilos
+- ✅ Sistema de logging completo
+
+
+
+## ✍️ Autor
+[Norberto Lopez](https://github.com/KiritoKazut0)
+
